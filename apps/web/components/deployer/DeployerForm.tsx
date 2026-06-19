@@ -42,7 +42,7 @@ export default function DeployerForm() {
 
         if (data.success) {
           alert("Page updated successfully!");
-          setDeployUrl(`http://localhost:3001/view/${existingId}`);
+          setDeployUrl(`${window.location.origin}/view/${existingId}`);
         } else {
           console.log(data.error || "Update failed");
         }
@@ -51,7 +51,7 @@ export default function DeployerForm() {
 
         if (data.id) {
           localStorage.setItem(`editToken_${data.id}`, data.editToken);
-          setDeployUrl(`http://localhost:3001/view/${data.id}`);
+          setDeployUrl(`${window.location.origin}/view/${data.id}`);
         } else {
           alert(data.error || "Deployment failed");
         }
@@ -131,7 +131,7 @@ export default function DeployerForm() {
       {deployUrl && (
         <div className="mt-8 rounded-lg border border-blue-500 bg-blue-50 p-5">
           <h3 className="mb-2 text-xl font-semibold text-blue-600">
-            Success! 🎉
+            Successfully Deployed!
           </h3>
 
           <p className="mb-2 text-gray-700">Your page is live at:</p>
