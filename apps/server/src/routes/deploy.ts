@@ -1,10 +1,11 @@
 import { Router } from "express";
 import { randomBytes } from "crypto";
 import { prisma } from "../prisma";
+import { Request, Response } from "express"
 
 const router = Router();
 
-router.post("/", async (req, res) => {
+router.post("/", async (req: Request, res: Response) => {
   try {
     const { htmlContent } = req.body;
 

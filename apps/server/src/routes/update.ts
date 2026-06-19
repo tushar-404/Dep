@@ -1,9 +1,10 @@
 import { Router } from "express";
 import { prisma } from "../prisma";
+import { Request, Response } from "express"
 
 const router = Router();
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const { htmlContent, editToken } = req.body;

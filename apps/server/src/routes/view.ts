@@ -1,9 +1,10 @@
 import { Router } from "express";
 import { prisma } from "../prisma";
+import { Request, Response } from 'express'
 
 const router = Router();
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
