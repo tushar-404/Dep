@@ -65,21 +65,16 @@ export default function DeployerForm() {
 
   return (
     <div className="card-shimmer relative w-full max-w-[580px] flex flex-col overflow-hidden rounded-2xl border border-white/[7%] bg-[#14151c] shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset,0_20px_60px_rgba(0,0,0,0.6)]">
-
-      {/* ── Main content area ─────────────────────────────────── */}
       <div className="flex flex-col gap-3 p-5">
-        {/* IdInput shows above the file zone when in update mode */}
         <IdInput />
         <FileUploader />
       </div>
 
-      {/* ── Bottom toolbar — like Bolt's action bar ────────────── */}
       <div className="flex items-center justify-between gap-3 px-4 py-3 border-t border-white/[6%] bg-white/[1.5%]">
         <ModeToggle />
         <SubmitButton onClick={handleAction} />
       </div>
 
-      {/* ── Deploy result — shown inside card after deploy ─────── */}
       <DeployResult />
     </div>
   );

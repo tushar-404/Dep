@@ -7,12 +7,6 @@ export default function FileUploader() {
   const [file, setFile] = useAtom(fileAtom);
 
   return (
-    /*
-     * `group` on the label lets hover/focus-within propagate to children.
-     * The invisible input sits at z-10 covering the full label area,
-     * so every click opens the native file picker.
-     * The visible zone has pointer-events-none — never intercepts clicks.
-     */
     <label className="group block cursor-pointer relative min-h-[100px]">
       <input
         type="file"
@@ -22,9 +16,7 @@ export default function FileUploader() {
       />
 
       <div className="relative flex flex-col items-center justify-center gap-3 py-8 px-5 rounded-xl border border-dashed border-white/[10%] bg-white/[2%] text-center pointer-events-none transition-all duration-200 group-hover:border-blue-500/30 group-hover:bg-blue-500/[3%] group-focus-within:border-blue-500/30">
-
         {file ? (
-          /* Selected state — minimal green confirmation */
           <div className="flex items-center gap-2.5">
             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-green-500/15 border border-green-500/25">
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
@@ -35,7 +27,6 @@ export default function FileUploader() {
             <span className="text-xs text-gray-600 flex-shrink-0">ready to deploy</span>
           </div>
         ) : (
-          /* Empty state */
           <>
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/[5%] border border-white/[8%] text-gray-400 transition-all duration-300 ease-spring group-hover:text-blue-400 group-hover:-translate-y-0.5">
               <svg

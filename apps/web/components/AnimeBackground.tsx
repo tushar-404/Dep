@@ -1,7 +1,5 @@
 "use client";
 
-// Curated anime girl wallpapers from wallhaven.cc street/toplist theme
-// These are direct CDN image URLs from wallhaven
 const WALLPAPERS = [
   "https://w.wallhaven.cc/full/85/wallhaven-85ok17.jpg",
   "https://w.wallhaven.cc/full/ex/wallhaven-exlppw.jpg",
@@ -22,7 +20,6 @@ export default function AnimeBackground() {
     <div className="bg-grid" aria-hidden="true">
       {WALLPAPERS.map((src, i) => (
         <div key={i} className="bg-grid__cell">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={src}
             alt=""
@@ -31,7 +28,6 @@ export default function AnimeBackground() {
           />
         </div>
       ))}
-      {/* Dark vignette overlay */}
       <div className="bg-grid__overlay" />
     </div>
   );

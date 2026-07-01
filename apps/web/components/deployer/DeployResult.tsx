@@ -19,8 +19,6 @@ export default function DeployResult() {
 
   return (
     <div className="animate-fade-up mx-5 mb-5 flex flex-col gap-3 rounded-xl border border-green-500/[18%] bg-green-500/[4%] p-4">
-
-      {/* Status row */}
       <div className="flex items-center gap-2">
         <span
           className="w-[6px] h-[6px] rounded-full bg-green-500 flex-shrink-0 animate-pulse-green"
@@ -31,7 +29,6 @@ export default function DeployResult() {
         </span>
       </div>
 
-      {/* URL row */}
       <div className="flex items-center gap-2 rounded-lg bg-black/25 border border-white/[5%] px-3 py-2.5">
         <a
           href={deployUrl}
